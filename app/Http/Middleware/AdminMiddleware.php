@@ -15,12 +15,14 @@ class AdminMiddleware
      */
     public function handle($request, Closure $next)
     {
-        $user = $request->user();
+      $user = $request->user();
 
-        if($user){
-          if($user->isAdmin()){
-            return $next($request);
-          }
+      if($user){
+        if($user->isAdmin()){
+          return $next($request);
         }
+      }
+
+      return abort(403);
     }
 }
