@@ -15,7 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/admin', 'AdminController@dashboard');
+Route::group(['middleware' => 'admin'], function(){
+  Route::get('/admin', 'AdminController@dashboard');
+});
 
 Auth::routes();
 
