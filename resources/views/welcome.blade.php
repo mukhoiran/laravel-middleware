@@ -93,6 +93,22 @@
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
+                <hr>
+                <ol>
+                  <li>Configure DB on .env </li>
+                  <li>php artisan make:auth </li>
+                  <li>add field role (tinyInt)->default(1) on user migrate </li>
+                  <li>php artisan migrate </li>
+                  <li>register 2 user, last user manual change to role 2 </li>
+                  <li>create routes /admin, adminController@dashboard </li>
+                  <li>add function dashboard on adminController </li>
+                  <li>php artsain make:middleware adminMiddleware </li>
+                  <li>setup middleware </li>
+                  <li> Register middlewar on kernel </li>
+                  <li> add function is_Admin on User model </li>
+                  <li> add group routes middleware admin </li>
+                  <li> Add view 403 </li>
+                </ol>
             </div>
         </div>
     </body>
